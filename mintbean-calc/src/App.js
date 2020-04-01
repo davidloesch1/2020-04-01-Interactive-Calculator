@@ -33,7 +33,7 @@ class App extends Component {
     a = (p)*[r*((1+r)**n)]/[((1+r)**n) - 1]
     this.setState({
       payment: a
-    }).then()
+    })
   }
   render() {
     return (

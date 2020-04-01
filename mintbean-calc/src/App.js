@@ -41,7 +41,8 @@ class App extends Component {
       payment = <h1>$ {this.state.payment}</h1>
     }
     return (
-      <>
+      <div className="main">
+        <h1>Mortgage Payment Calculator</h1>
         <form>
           <div class="form-group">
             <label for="amount">Loan Amount:</label>
@@ -86,7 +87,7 @@ class App extends Component {
         </form>
         <button onClick={this.calculate}> Submit</button>
         {payment}
-      </>
+      </div>
     );
   }
 }

@@ -32,10 +32,14 @@ class App extends Component {
     let a = 0
     a = (p)*[r*((1+r)**n)]/[((1+r)**n) - 1]
     this.setState({
-      payment: a
+      payment: a.toFixed(2)
     })
   }
   render() {
+    let payment = ""
+    if(this.state.payment){
+      payment = <h1>$ {this.state.payment}</h1>
+    }
     return (
       <>
         <form>
@@ -81,7 +85,7 @@ class App extends Component {
           
         </form>
         <button onClick={this.calculate}> Submit</button>
-        <h1>{this.state.payment}</h1>
+        {payment}
       </>
     );
   }
